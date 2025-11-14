@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Office Feench</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import and application */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-purple': '#6A1B9A',
+                        'secondary-orange': '#FF7043',
+                        'background-light': '#F8FAFC',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background-light text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo: OFFICE FEENCH -->
+                <div class="flex justify-start">
+                    <a href="index.html#home" class="text-3xl font-black text-primary-purple tracking-wider">
+                       <img src="assets/img/products/images/logo.svg" alt="Office Feench Logo" class="h-20 w-auto object-contain scale-150 hover:scale-105 transition-transform duration-500" />
+                    </a>
+                </div>
+                <!-- Back to Home Link -->
+                <div class="flex items-center justify-end">
+                    <a href="index.html" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-lg shadow-md text-base font-medium text-white bg-secondary-orange hover:bg-primary-purple transition duration-300">
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Product Grid Section -->
+    <main class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Dynamic Title -->
+            <div class="border-b border-gray-300 pb-5 mb-10">
+                <h1 id="page-title" class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Loading Products...
+                </h1>
+            </div>
+
+            <!-- Product Grid -->
+            <!-- Our new products.js script will fill this div -->
+            <div id="products-grid" class="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Product cards will be dynamically inserted here -->
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+            <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+                <div class="px-5 py-2">
+                    <a href="index.html#services" class="text-base text-gray-300 hover:text-secondary-orange transition duration-150">Services</a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="index.html#products" class="text-base text-gray-300 hover:text-secondary-orange transition duration-150">Products</a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="index.html#contact" class="text-base text-gray-300 hover:text-secondary-orange transition duration-150">Contact</a>
+                </div>
+            </nav>
+            <p class="mt-8 text-center text-base text-gray-400">
+                &copy; 2024 OFFICE FEENCH Corporate Solutions. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Link the new products.js script -->
+    <script src="assets/js/products.js"></script>
+</body>
+</html>
