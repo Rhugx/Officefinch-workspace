@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
       pageTitle.textContent = titleText;
 
       // Fetch products based on category/supplyType
-      const response = await fetch(`/api/products${queryString}`); // Adjust the URL as needed***********
+      const response = await fetch(`http://localhost:5000/api/products${queryString}`); // Adjust the URL as needed***********
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
       const products = await response.json();

@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const fetchServices = async () => {
     try {
-      const response = await fetch('/api/services');// Adjust the URL as needed***********
+      const response = await fetch('http://localhost:5000/api/services');// Adjust the URL as needed***********
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
       const data = await response.json();
