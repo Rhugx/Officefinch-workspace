@@ -94,7 +94,8 @@ const getAllCategories = async (req, res) => {
         }
 
         // Fetch all categories (either the newly seeded ones or existing ones)
-        const categories = await Category.find({});
+        // const categories = await Category.find({});
+        const categories = await Category.find({}).sort({ _id: 1 });
         res.status(200).json(categories);
     } catch (error) {
         console.error('Error fetching categories:', error);
