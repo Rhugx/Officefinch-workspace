@@ -43,7 +43,8 @@ export const getAllServices = async (req, res) => {
     }
 
     // Now, find all services (including the new seed data if it was just added)
-    const services = await Service.find();
+    // const services = await Service.find();
+    const services = await Service.find({}).sort({ _id: 1 });
 
     res.status(200).json({ success: true, data: services });
   } catch (err) {
