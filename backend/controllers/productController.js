@@ -1354,7 +1354,8 @@ export const getProducts = async (req, res) => {
     if (req.query.supplyType) filter.supplyType = req.query.supplyType;
 
     // Fetch filtered or all products
-    const products = await Product.find(filter);
+    // const products = await Product.find(filter);
+    const products = await Product.find(filter).sort({ _id: 1 });
 
     res.status(200).json(products);
   } catch (error) {
