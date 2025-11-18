@@ -31,9 +31,9 @@ export const saveContact = async (req, res) => {
       const mailOptions = {
         from: process.env.EMAIL_USER,
         to: process.env.EMAIL_USER, // send to yourself
-        subject: "📩 New Contact Enquiry",
+        subject: "📩 New Enquiry",
         html: `
-          <h3>New Contact Enquiry</h3>
+          <h3>New Enquiry</h3>
           <p><strong>Name:</strong> ${name}</p>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Phone:</strong> ${phone || "N/A"}</p>
