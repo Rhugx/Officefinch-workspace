@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const urlParams = new URLSearchParams(window.location.search);
       const categoryParam = urlParams.get('category'); // from services.js redirect
 
-      const response = await fetch('http://localhost:5000/api/categories'); // Adjust the URL as needed***********
+      const response = await fetch('https://officefinch-workspace.onrender.com/api/categories'); // Adjust the URL as needed***********
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
       const categories = await response.json();

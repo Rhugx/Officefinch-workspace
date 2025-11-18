@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     submitButton.disabled = true;
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', // Adjust the URL as needed***********
+      const response = await fetch('https://officefinch-workspace.onrender.com/api/contact', // Adjust the URL as needed***********
          {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
